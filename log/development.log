@@ -1,0 +1,189 @@
+Started GET "/" for ::1 at 2019-06-10 11:45:55 +1000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "cafe_development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1741.5ms)[0m  [1m[35mCREATE DATABASE "cafe_development" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (951.1ms)[0m  [1m[35mCREATE DATABASE "cafe_test" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (215.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (137.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4600616931423439290)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-10 03:00:37.287770"], ["updated_at", "2019-06-10 03:00:37.287770"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4600616931423439290)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-06-10 13:01:06 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/doughnut/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/doughnut/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.8ms)
+Completed 200 OK in 51ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-10 14:00:50 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2857ms (Views: 2838.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-10 14:03:48 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-10 14:24:31 +1000
+  
+SyntaxError (/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+            MenuItem.new("Tea",)
+            ^~~~~~~~
+/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+    ]
+    ^):
+  
+app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+Started GET "/" for ::1 at 2019-06-10 14:26:10 +1000
+  
+SyntaxError (/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+            MenuItem.new("Tea",)
+            ^~~~~~~~
+/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+    ]
+    ^):
+  
+app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+Started GET "/" for ::1 at 2019-06-10 14:26:36 +1000
+  
+SyntaxError (/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+            MenuItem.new("Tea",3.00)
+            ^~~~~~~~
+/home/doughnut/code/repos/rails/cafe/app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+    ]
+    ^):
+  
+app/controllers/cafe_controller.rb:12: syntax error, unexpected tCONSTANT, expecting ']'
+app/controllers/cafe_controller.rb:14: syntax error, unexpected ']', expecting end
+Started GET "/" for ::1 at 2019-06-10 14:29:26 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:11: syntax error, unexpected '<'
+...d=( "$%.2f" % menu_item.price></td>
+...                              ^
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:12: unknown regexp options - tr
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:13: syntax error, unexpected '<'
+    <%end);@output_buffer.safe_app...
+    ^
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:13: unknown type of %string
+    <%end);@output_buffer.safe_append...
+     ^~~):
+  
+app/views/cafe/index.html.erb:11: syntax error, unexpected '<'
+app/views/cafe/index.html.erb:12: unknown regexp options - tr
+app/views/cafe/index.html.erb:13: syntax error, unexpected '<'
+app/views/cafe/index.html.erb:13: unknown type of %string
+Started GET "/" for ::1 at 2019-06-10 14:31:05 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-10 14:32:00 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:11: syntax error, unexpected '<'
+...d=( "$%.2f" % menu_item.price></td>
+...                              ^
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:12: unknown regexp options - tr
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:13: syntax error, unexpected '<'
+    <%end);@output_buffer.safe_app...
+    ^
+/home/doughnut/code/repos/rails/cafe/app/views/cafe/index.html.erb:13: unknown type of %string
+    <%end);@output_buffer.safe_append...
+     ^~~):
+  
+app/views/cafe/index.html.erb:11: syntax error, unexpected '<'
+app/views/cafe/index.html.erb:12: unknown regexp options - tr
+app/views/cafe/index.html.erb:13: syntax error, unexpected '<'
+app/views/cafe/index.html.erb:13: unknown type of %string
+Started GET "/" for ::1 at 2019-06-10 14:32:50 +1000
+Processing by CafeController#index as HTML
+  Rendering cafe/index.html.erb within layouts/application
+  Rendered cafe/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
